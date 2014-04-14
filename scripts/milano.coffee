@@ -3,7 +3,7 @@ cheerio = require 'cheerio'
 
 module.exports = (robot) ->
   robot.respond /(ミラノ|milano)/, (msg) ->
-    url = 'http://24timezones.com/ja_time/italy_milano_clock.php'
+    url = "http://24timezones.com/ja_time/italy_milano_clock.php"
     options =
       url: url
       timeout: 2000
