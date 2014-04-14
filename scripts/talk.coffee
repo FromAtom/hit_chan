@@ -11,8 +11,26 @@ module.exports = (robot) ->
   robot.hear /もっちもち/, (msg) ->
     msg.send "またニーソのかわいい女の子を見つけたんですね。"
 
+  robot.hear /進捗ダメです/, (msg) ->
+    msg.send "研究しろ！"
+
   robot.hear /進捗/, (msg) ->
     msg.send "進捗どうでしょう？"
 
-  robot.hear /進捗ダメです/, (msg) ->
-    msg.send "研究しろ！"
+  robot.hear /Emacs/, (msg) ->
+    msg.send "最高！"
+
+  robot.hear /悪女/, (msg) ->
+    msg.send "もしかして：みなみん"
+
+  robot.hear /めでたい/, (msg) ->
+    msg.send "寿"
+
+  robot.hear /寿司/, (msg) ->
+    msg.send ":sushi:"
+
+  robot.hear /ビール/, (msg) ->
+    msg.send ":beer:"
+
+  robot.hear /お腹へった/, (msg) ->
+    msg.send ":sushi:"
