@@ -14,7 +14,7 @@ module.exports = (robot) ->
   robot.hear /進捗ダメです/, (msg) ->
     msg.send "研究しろ！"
 
-  robot.hear /進捗/, (msg) ->
+  robot.hear /進捗(?!ダメです)/, (msg) ->
     msg.send "進捗どうでしょう？"
 
   robot.hear /Emacs/, (msg) ->
