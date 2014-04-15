@@ -1,6 +1,12 @@
 module.exports = (robot) ->
   robot.hear /こんにち(は|わ)/, (msg) ->
-    msg.send "こんにちは"
+    msg.send "こんにちは！"
+
+  robot.hear /こんばん(は|わ)/, (msg) ->
+    msg.send "こんばんは！"
+
+  robot.hear /おはよう/, (msg) ->
+    msg.send "おはようございます！"
 
   robot.hear /わいわい/, (msg) ->
     msg.send "わいわい"
@@ -18,10 +24,7 @@ module.exports = (robot) ->
     msg.send "進捗どうでしょう？"
 
   robot.hear /Emacs/, (msg) ->
-    msg.send "最高！"
-
-  robot.hear /悪女/, (msg) ->
-    msg.send "もしかして：みなみん"
+    msg.send "Emacs最高！"
 
   robot.hear /めでたい/, (msg) ->
     msg.send ":bamboo:寿:bamboo:"
