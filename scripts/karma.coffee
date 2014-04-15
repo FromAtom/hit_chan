@@ -24,11 +24,11 @@ class Karma
     @cache = {}
 
     @increment_responses = [
-      "+1!", "gained a level!", "is on the rise!", "leveled up!"
+      "が徳を積みました。"
     ]
 
     @decrement_responses = [
-      "took a hit! Ouch.", "took a dive.", "lost a life.", "lost a level."
+      "が徳を失いました。"
     ]
 
     @robot.brain.on 'loaded', =>
@@ -88,7 +88,7 @@ module.exports = (robot) ->
     subject = msg.match[1].toLowerCase()
     if allow_self is true or msg.message.user.name.toLowerCase() != subject
       karma.increment subject
-      msg.send "#{subject} #{karma.incrementResponse()} (Karma: #{karma.get(subject)})"
+      msg.send "#{subject} #{karma.incrementResponse()} (功徳: #{karma.get(subject)})"
     else
       msg.send msg.random karma.selfDeniedResponses(msg.message.user.name)
 
@@ -96,7 +96,7 @@ module.exports = (robot) ->
     subject = msg.match[1].toLowerCase()
     if allow_self is true or msg.message.user.name.toLowerCase() != subject
       karma.decrement subject
-      msg.send "#{subject} #{karma.decrementResponse()} (Karma: #{karma.get(subject)})"
+      msg.send "#{subject} #{karma.decrementResponse()} (功徳: #{karma.get(subject)})"
     else
       msg.send msg.random karma.selfDeniedResponses(msg.message.user.name)
 
