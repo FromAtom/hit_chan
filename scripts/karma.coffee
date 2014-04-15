@@ -28,7 +28,7 @@ class Karma
     ]
 
     @decrement_responses = [
-      "が徳を失いました。"
+      "が業を重ねました。"
     ]
 
     @robot.brain.on 'loaded', =>
