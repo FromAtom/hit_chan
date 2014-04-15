@@ -1,4 +1,7 @@
 module.exports = (robot) ->
+  robot.hear /(hit|ひっと|ヒット)ちゃん/i, (msg) ->
+    msg.send "HITちゃんだよー。よろしくね。"
+
   robot.hear /こんにち(は|わ)/, (msg) ->
     msg.send "こんにちは！"
 
