@@ -30,7 +30,8 @@ module.exports = (robot) ->
     msg.send ":sushi:"
 
   robot.hear /ビール/, (msg) ->
-    msg.send ":beer:"
+    @beers = [":beers:", ":beer:"]
+    msg.send @beers[Math.floor(Math.random() * @beers.length)]
 
   robot.hear /(腹へ|はらへ)/, (msg) ->
     @foods = [
