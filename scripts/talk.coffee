@@ -39,7 +39,10 @@ module.exports = (robot) ->
     @beers = [":beers:", ":beer:"]
     msg.send @beers[Math.floor(Math.random() * @beers.length)]
 
-  robot.hear /(腹へ|はらへ)/, (msg) ->
+  robot.hear /(麻雀|マージャン|まーじゃん)/, (msg) ->
+    msg.send ":mahjong::mahjong::mahjong:"
+
+  robot.hear /(腹|はら|ハラ)(?:|が|ガ)(減|へ|ヘ)(?:|った|ッタ)/, (msg) ->
     @foods = [
       ":sushi:", ":pizza:", ":hamburger:", ":fries:", ":poultry_leg:",
       ":meat_on_bone:", ":spaghetti:", ":curry:", ":fried_shrimp:",
