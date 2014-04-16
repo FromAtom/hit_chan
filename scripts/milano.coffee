@@ -2,7 +2,7 @@ request = require 'request'
 cheerio = require 'cheerio'
 
 module.exports = (robot) ->
-  robot.hear /\A(ミラノ|milano)\z/i, (msg) ->
+  robot.respond /(ミラノ|milano)/, (msg) ->
     url = "http://24timezones.com/ja_jikantai/milan_jikan.php"
     options =
       url: url
