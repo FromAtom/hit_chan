@@ -20,7 +20,7 @@ module.exports = (robot) ->
   robot.hear /もっちもち/, (msg) ->
     msg.send "またニーソのかわいい女の子を見つけたんですね。"
 
-  robot.hear /進捗ダメです/, (msg) ->
+  robot.hear /進捗(ダメ|だめ)です/, (msg) ->
     msg.send "研究しろ！"
 
   robot.hear /進捗(?!ダメです)/, (msg) ->
@@ -38,6 +38,9 @@ module.exports = (robot) ->
   robot.hear /ビール/, (msg) ->
     @beers = [":beers:", ":beer:"]
     msg.send @beers[Math.floor(Math.random() * @beers.length)]
+
+  robot.hear /電池/, (msg) ->
+    msg.send ":battery:"
 
   robot.hear /(麻雀|マージャン|まーじゃん)/, (msg) ->
     msg.send ":mahjong::mahjong::mahjong:"
