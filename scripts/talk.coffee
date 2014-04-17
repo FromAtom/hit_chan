@@ -39,6 +39,10 @@ module.exports = (robot) ->
     @beers = [":beers:", ":beer:"]
     msg.send @beers[Math.floor(Math.random() * @beers.length)]
 
+  robot.hear /疲れ/, (msg) ->
+    @drinks = [":tea:", ":coffee:", ":tropical_drink:", ":sake:", ":wine_glass:", ":cocktail:"]
+    msg.send @drinks[Math.floor(Math.random() * @drinks.length)]
+
   robot.hear /電池/, (msg) ->
     msg.send ":battery:"
 
@@ -49,8 +53,7 @@ module.exports = (robot) ->
     @foods = [
       ":sushi:", ":pizza:", ":hamburger:", ":fries:", ":poultry_leg:",
       ":meat_on_bone:", ":spaghetti:", ":curry:", ":fried_shrimp:",
-      ":bento:", ":sushi:", ":rice_ball:", ":ramen:", ":oden:",
-      ":egg:", ":cookie:"
+      ":bento:", ":sushi:", ":rice_ball:", ":ramen:", ":oden:", ":egg:"
     ]
     message = @foods[Math.floor(Math.random() * @foods.length)]
     msg.send message
