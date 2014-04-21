@@ -53,6 +53,9 @@ module.exports = (robot) ->
   robot.hear /(麻雀|マージャン|まーじゃん)/, (msg) ->
     msg.send ":mahjong::mahjong::mahjong:"
 
+  robot.hear /(くそねみ|クソネミ|ｸｿﾈﾐ)/, (msg) ->
+    msg.send "( ˘ω˘)ｽﾔｧ"
+
   robot.hear /(腹|はら|ハラ)(?:|が|ガ)(減|へ|ヘ)(?:|った|ッタ)/, (msg) ->
     @foods = [
       ":sushi:", ":pizza:", ":hamburger:", ":fries:", ":poultry_leg:",
