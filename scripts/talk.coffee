@@ -19,6 +19,10 @@ module.exports = (robot) ->
     sleep 1000
     msg.send "こんばんは！"
 
+  robot.hear /おはやっほ/, (msg) ->
+    sleep 1000
+    msg.send "おはやっほー！"
+
   robot.hear /おはよう/, (msg) ->
     sleep 1000
     msg.send "おはようございます！"
