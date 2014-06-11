@@ -84,6 +84,10 @@ module.exports = (robot) ->
     sleep 1000
     msg.send "寝ろ！"
 
+  robot.hear /(ぬるぽ|ヌルポ|ﾇﾙﾎﾟ)/, (msg) ->
+    sleep 1000
+    msg.send "ガッ"
+
   robot.hear /(腹|はら|ハラ)(?:|が|ガ)(減|へ|ヘ)(?:|った|ッタ)/, (msg) ->
     sleep 1000
     @foods = [
