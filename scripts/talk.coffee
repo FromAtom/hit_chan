@@ -39,10 +39,6 @@ module.exports = (robot) ->
     sleep 1000
     msg.send "またニーソのかわいい女の子を見つけたんですね。"
 
-  robot.hear /進捗(ダメ|だめ)です/, (msg) ->
-    sleep 1000
-    msg.send "研究しろ！"
-
   robot.hear /Emacs/, (msg) ->
     msg.send "Emacs最高！"
 

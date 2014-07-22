@@ -1,6 +1,11 @@
 module.exports = (robot) ->
-  robot.hear /進捗(?!ダメです)/, (msg) ->
+  robot.hear /進捗(?!(ダメ|だめ)です)/, (msg) ->
     imageMe msg, '進捗どうですか？', (url) ->
+      sleep 1000
+      msg.send url
+
+  robot.hear /進捗(ダメ|だめ)です/, (msg) ->
+    imageMe msg, '進捗ダメです', (url) ->
       sleep 1000
       msg.send url
 
