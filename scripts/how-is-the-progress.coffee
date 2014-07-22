@@ -1,7 +1,6 @@
 module.exports = (robot) ->
   robot.hear /進捗(?!ダメです)/, (msg) ->
-    animate = true if Math.floor(Math.random()) is 0
-    imageMe msg, '進捗どうでしょう', animate, (url) ->
+    imageMe msg, '進捗どうでしょう', (url) ->
       sleep 1000
       msg.send url
 
