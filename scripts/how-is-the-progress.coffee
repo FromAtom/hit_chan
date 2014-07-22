@@ -1,6 +1,6 @@
 module.exports = (robot) ->
   robot.hear /進捗(?!ダメです)/, (msg) ->
-    imageMe msg, '進捗どうでしょう', (url) ->
+    imageMe msg, '進捗どうですか？', (url) ->
       sleep 1000
       msg.send url
 
