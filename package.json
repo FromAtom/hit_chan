@@ -29,7 +29,8 @@
     "jsdom": "~0.10.5",
     "underscore": "~1.6.0",
     "iconv": "~2.0.7",
-    "hubot-weather-ja": "0.0.1"
+    "hubot-weather-ja": "0.0.1",
+    "hubot-zoi": "0.0.2"
   },
   "engines": {
     "node": ">= 0.8.x",
