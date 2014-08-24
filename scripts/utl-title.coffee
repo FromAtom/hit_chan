@@ -23,6 +23,7 @@ convertEncode = (body) ->
 module.exports = (robot) ->
   robot.hear /(h?ttps?:\/\/[-\w@:%\+.~#?&\/=]+)/i, (msg)->
     uri = msg.match[1]
+    return if /\/pukiwiki\/hitwiki\//i.test(uri)
     request { uri: uri, encoding: null }, (error, response, body)->
       return if error
 
