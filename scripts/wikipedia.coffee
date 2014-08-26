@@ -24,8 +24,8 @@ HTMLParser = require "htmlparser"
 module.exports = (robot) ->
   robot.respond /(wiki)( me)? (.*)/i, (msg) ->
     wikiMe robot, msg.match[3], (text, url) ->
+      text = text + ' - ' + url if url
       msg.send text
-      msg.send url if url
 
 wikiMe = (robot, query, cb) ->
   articleURL = makeArticleURL(makeTitleFromQuery(query))
