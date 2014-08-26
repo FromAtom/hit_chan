@@ -1,3 +1,9 @@
+# Description:
+#   進捗どうですか？
+#
+# Author:
+#   FromAtom
+
 module.exports = (robot) ->
   robot.hear /進捗(?!(ダメ|だめ)です)/, (msg) ->
     imageMe msg, '進捗どうですか？', (url) ->

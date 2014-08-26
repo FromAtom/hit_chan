@@ -1,3 +1,10 @@
+# Description:
+#   呼んだら答える賢い子
+#
+# Author:
+#   FromAtom
+
+
 sleep = (ms) ->
   start = new Date().getTime()
   continue while new Date().getTime() - start < ms

@@ -1,3 +1,16 @@
+# Description:
+#   Display milano time
+#
+# Dependencies:
+#   "request"
+#   "cheerio"
+#
+# Commands:
+#   hubot ミラノ|milano
+#
+# Author:
+#   FromAtom
+
 request = require 'request'
 cheerio = require 'cheerio'
 

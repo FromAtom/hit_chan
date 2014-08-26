@@ -1,3 +1,16 @@
+# Description:
+#   Display JST(Japan Standard Time)
+#
+# Dependencies:
+#   "request"
+#   "cheerio"
+#
+# Commands:
+#   hubot 京都|日本
+#
+# Author:
+#   FromAtom
+
 request = require 'request'
 cheerio = require 'cheerio'
 
