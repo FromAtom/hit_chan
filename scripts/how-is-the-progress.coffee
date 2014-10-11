@@ -1,5 +1,5 @@
 # Description:
-#   進捗どうですか？
+#   進捗どうですか？ - How is the progress? -
 #
 # Author:
 #   FromAtom
