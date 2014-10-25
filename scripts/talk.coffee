@@ -13,10 +13,10 @@ module.exports = (robot) ->
   robot.hear /(hit|ひっと|ヒット)ちゃん/i, (msg) ->
     sleep 1000
     if /(賢|かしこ|頭い|頭良|あたまい)い/.test(msg.message.text)
-        msg.send "えっへん！"
+        msg.send ":blush:えっへん！"
 
     if /(可愛|かわい|カワイ)(い|イ)/.test(msg.message.text)
-        msg.send "えへへ...///"
+        msg.send ":laughing:えへへ...///"
 
   robot.hear /こんにち(は|わ)/, (msg) ->
     sleep 1000
@@ -51,7 +51,7 @@ module.exports = (robot) ->
 
   robot.hear /めでたい/, (msg) ->
     sleep 1000
-    msg.send ":bamboo:寿:bamboo:"
+    msg.send ":sparkles::bamboo::congratulations::bamboo::sparkles:"
 
   robot.hear /寿司/, (msg) ->
     sleep 1000
@@ -99,8 +99,8 @@ module.exports = (robot) ->
 
   robot.hear /(す(い|み)ません|ス(ミ|イ)マセン)/, (msg) ->
     sleep 1000
-    msg.send "許さん"
+    msg.send ":rage:許さん:rage:"
 
   robot.hear /(許|ゆる)して/, (msg) ->
     sleep 1000
-    msg.send "許す"
+    msg.send ":innocent:許す:innocent:"
