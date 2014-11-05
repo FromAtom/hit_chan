@@ -108,19 +108,13 @@ module.exports = (robot) ->
     else
       msg.send msg.random karma.selfDeniedResponses(msg.message.user.name)
 
-  robot.respond /karma( best)?$/i, (msg) ->
-    verbiage = ["The Best"]
+  robot.respond /功徳/i, (msg) ->
+    verbiage = [":trophy:功徳ランキング:trophy:"]
     for item, rank in karma.top()
-      verbiage.push "#{rank + 1}. #{item.name} - #{item.karma}"
-    msg.send verbiage.join("\n")
-
-  robot.respond /karma worst$/i, (msg) ->
-    verbiage = ["The Worst"]
-    for item, rank in karma.bottom()
-      verbiage.push "#{rank + 1}. #{item.name} - #{item.karma}"
+      verbiage.push "#{rank + 1}. #{item.name} : #{item.karma}"
     msg.send verbiage.join("\n")
 
   robot.respond /karma (\S+[^-\s])$/i, (msg) ->
     match = msg.match[1].toLowerCase()
     if match != "best" && match != "worst"
-      msg.send "\"#{match}\" has #{karma.get(match)} karma."
+      msg.send "\"#{match}\" の徳は #{karma.get(match)} です。"
