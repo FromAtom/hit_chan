@@ -97,7 +97,7 @@ module.exports = (robot) ->
     message = @foods[Math.floor(Math.random() * @foods.length)]
     msg.send message
 
-  robot.hear /(す(い|み)ません|ス(ミ|イ)マセン)/, (msg) ->
+  robot.hear /(す(い|み)ません|ス(ミ|イ)マセン|ごめん|(許|ゆる)さん)/, (msg) ->
     sleep 1000
     msg.send ":rage:許さん:rage:"
 
