@@ -14,7 +14,8 @@ getTimeDiffAsMinutes = (old_msec) ->
 module.exports = (robot) ->
   robot.respond /(\S+)/i, (msg) ->
     DOCOMO_API_KEY = process.env.DOCOMO_API_KEY
-    return unless DOCOMO_API_KEY
+    message = msg.match[1]
+    return unless DOCOMO_API_KEY && message
 
     ## ContextIDを読み込む
     KEY_DOCOMO_CONTEXT = 'docomo-talk-context'
@@ -32,19 +33,22 @@ module.exports = (robot) ->
 
     url = 'https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=' + DOCOMO_API_KEY
     user_name = msg.message.user.name
-    message = msg.match[1]
 
     request = require('request');
     request.post
       url: url
       json:
         utt: message
-        nickname: user_name
+        nickname: user_name if user_name
         age: "25"
         context: context if context
         place: "京都"
       , (err, response, body) ->
+        ## ContextIDの保存
         robot.brain.set KEY_DOCOMO_CONTEXT, body.context
+
+        ## 会話発生時間の保存
         now_msec = new Date().getTime()
         robot.brain.set KEY_DOCOMO_CONTEXT_TTL, now_msec
+
         msg.send body.utt
