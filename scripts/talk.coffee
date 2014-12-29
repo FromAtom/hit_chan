@@ -105,11 +105,11 @@ module.exports = (robot) ->
     sleep 1000
     msg.send ":innocent:許す:innocent:"
 
-  robot.hear /(wwww*|ｗｗｗｗ*)/, (msg) ->
+  robot.hear /(wwwwww*|ｗｗｗｗｗｗ*)/, (msg) ->
     sleep 1000
     @wwww = [
       "ちょっとここ草生えてるので掃除しときますね", "だれですかこんなところに草生やしたのは",
        "草刈りしなきゃ"
     ]
-    message = @wwww[Math.floor(Math.random()) * @wwww.length]
+    message = @wwww[Math.floor(Math.random() * @wwww.length)]
     msg.send message
