@@ -109,6 +109,6 @@ module.exports = (robot) ->
     sleep 1000
     msg.send ":bamboo:あけおめ:bamboo:"
 
-  robot.hear /あけましておめでとう/, (msg) ->
+  robot.hear /(あ|明)けましておめでとう/, (msg) ->
     sleep 1000
     msg.send ":bamboo:あけましておめでとう！:bamboo:"
