@@ -104,3 +104,11 @@ module.exports = (robot) ->
   robot.hear /(許|ゆる)して/, (msg) ->
     sleep 1000
     msg.send ":innocent:許す:innocent:"
+
+  robot.hear /あけおめ/, (msg) ->
+    sleep 1000
+    msg.send ":bamboo:あけおめ:bamboo:"
+
+  robot.hear /あけましておめでとう/, (msg) ->
+    sleep 1000
+    msg.send ":bamboo:あけましておめでとう！:bamboo:"
